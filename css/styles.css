@@ -1,0 +1,1017 @@
+/* Загальні стилі */
+* {
+        margin: 0; /* Встановлює нульові відступи для всіх елементів */
+        padding: 0; /* Встановлює нульові відступи для всіх елементів */
+        box-sizing: border-box; /* Встановлює врахування відступів і рамок у розміри елементів */
+}
+
+body {
+        font-family: 'Roboto', sans-serif; /* Встановлює шрифт для всього тексту */
+        line-height: 1.5; /* Встановлює висоту рядка */
+        color: #333; /* Встановлює колір тексту */
+        margin: 0; /* Встановлює нульовий відступ для тіла сторінки */
+        padding: 0; /* Встановлює нульовий відступ для тіла сторінки */
+}
+
+.container {
+        flex-wrap: wrap;
+        max-width: 1158px; /* Максимальна ширина контейнера */
+        margin: 0 auto; /* Центрує контейнер по горизонталі */
+        padding: 0 15px; /* Відступи по 15px з боків */
+}
+
+img {
+        display: block; /* перетворення картинки в блоковий елемент */
+        max-width: 100%; /* автоматично підлаштовує всі фото під ширину батьківського елемента */
+}
+
+/* Хедер */
+
+.page-header {
+        border-bottom: 1px solid #e7e9fc; /* Нижня рамка */
+        box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+                0px 1px 1px rgba(46, 47, 66, 0.16),
+                0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.header-container {
+        padding: 0 15px;
+        justify-content: space-between;
+        display: flex;
+}
+
+.main-logo {
+        padding-top: 24px;
+        padding-bottom: 24px;
+        justify-content: flex-start; /* Вирівнює контент логотипа по лівому краю. */
+        font-weight: 700; /* Задає жирність тексту. */
+        font-size: 18px; /* Встановлює розмір шрифту у 18px. */
+        line-height: 1.17; /* Встановлює висоту міжрядкового інтервалу. */
+        letter-spacing: 0.03em; /* Додає невеликий відступ між літерами. */
+        text-transform: uppercase; /* Змінює всі літери на великі. */
+        color: #4d5ae5; /* Встановлює синій колір тексту. */
+        font-family: "Raleway", sans-serif; /* Використовує шрифт "Raleway". */
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-right: 76px; /* Відступ для логотипа */
+}
+
+.main-logo span {
+        color: #2e2f42; /* Встановлює темно-сірий колір тексту. */
+
+}
+
+.menu {
+        font-weight: 500; /* Встановлює середню жирність тексту. */
+        font-size: 16px; /* Встановлює розмір шрифту у 16px. */
+        line-height: 1.5; /* Встановлює висоту міжрядкового інтервалу. */
+        letter-spacing: 0.02em; /* Додає невеликий відступ між літерами. */
+        color: #2e2f42; /* Встановлює темно-сірий колір тексту. */
+        font-family: "Roboto", sans-serif; /* Використовує шрифт "Roboto". */
+        align-items: center;
+        display: flex; /* Горизонтальне розташування меню */
+}
+
+.menu-list {
+        display: flex; /* Горизонтальне вирівнювання пунктів меню */
+        gap: 40px; /* Відстань між пунктами меню */
+        list-style: none; /* Прибрано маркери */
+        margin: 0;
+        padding: 0;
+        position: relative;
+        transition-property: color;
+}
+
+
+.menu-link-after::after {
+        content: '';
+        display: block;
+        border-radius: 2px;
+        width: 100%;
+        height: 4px;
+        background: #404bbf;
+        bottom: 0px;
+        bottom: -1px;
+        position: absolute;
+        align-items: center;
+        transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-link {
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* color: #404bbf; */
+        position: relative;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        text-decoration: none; /* Прибрано підкреслення */
+        font-size: 16px;
+        color: #333;
+        transition: color 0.3s ease; /* Анімація зміни кольору */
+}
+
+.menu-list li:first-child .menu-link {
+        color: #404bbf;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-link:hover {
+        color: #404bbf; /* Змінює колір тексту на синій при наведенні. */
+}
+
+.menu-link:focus {
+        color: #404bbf; /* Змінює колір тексту на синій при фокусі. */
+}
+
+.contacts {
+        font-style: normal; /* Змінює стиль шрифту на звичайний. */
+        gap: 40px; /*display: flex; Горизонтальне вирівнювання контактів */
+}
+
+.contacts-list {
+        display: flex; /*Горизонтальне розташування контактів */
+        gap: 40px; /* Відстань між контактами */
+        list-style: none; /* Прибрано маркери */
+        margin: 0;
+        padding: 0;
+}
+
+.contacts-link {
+        display: block;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        font-weight: 400; /* Встановлює нормальну жирність тексту. */
+        font-size: 16px; /* Задає розмір тексту. */
+        line-height: 1.5; /* Встановлює міжрядковий інтервал. */
+        letter-spacing: 0.02em; /* Додає відступ між літерами. */
+        color: #434455; /* Встановлює основний колір тексту. */
+        font-family: "Roboto", sans-serif; /* Використовує шрифт "Roboto". */
+        font-style: normal; /* Змінює стиль шрифту на звичайний. */
+        text-decoration: none; /* Прибрано підкреслення */
+        font-size: 14px;
+        color: #333;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Ефект при наведенні */
+}
+
+.contacts-link:hover {
+        color: #404bbf; /* Змінює колір тексту на синій при наведенні. */
+}
+
+.contacts-link:focus {
+        color: #404bbf; /* Змінює колір тексту на синій при наведенні. */
+}
+
+
+
+
+/* ______________________ГОЛОВНИЙ БАННЕР____________________________ */
+
+
+.one-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                        /* градієнт має мінімум двазначення, градієнт щоб затемнити фон накладається зверху,завжди перед картинкою бо те що перше записується то є зверху*/
+                        rgba(46, 47, 66, 0.7)),
+                url('../images/people-office.jpg');
+        /* Шлях до картинки */
+        background-size: cover;
+        /*Зображення розтягується, щоб заповнити елемент */
+
+        max-width: 1440px;
+        margin: 0 auto;
+        background-position: center; /* Центрування зображення в елементі */
+        background-repeat: no-repeat; /* Забороняє повторення зображення */
+        background-color: rgba(46, 47, 66, 0.7); /* Чорний напівпрозорий шар */
+        color: white; /* Білий текст */
+        text-align: center; /* Центрує текст */
+        padding-top: 188px;
+        padding-bottom: 188px;
+}
+
+.one-h {
+        font-weight: 700; /* Задає жирність тексту. */
+        font-size: 56px; /* Встановлює великий розмір шрифту для заголовка. */
+        line-height: 1.07; /* Встановлює міжрядковий інтервал. */
+        letter-spacing: 0.02em; /* Додає відступ між літерами. */
+        text-align: center; /* Центрує текст. */
+        color: #fff; /* Робить текст білим. */
+        font-family: "Roboto", sans-serif; /* Використовує шрифт "Roboto". */
+        margin-bottom: 0px; /* Відступ знизу */
+        max-width: 496px; /* Обмеження ширини заголовка */
+        margin: 0 auto; /* Центрування заголовка */
+}
+
+.one-button {
+        background-color: #4d5ae5; /* Встановлює синій фон кнопки. */
+        font-family: "Roboto", sans-serif; /* Використовує шрифт "Roboto". */
+        font-weight: 500; /* Встановлює середню жирність тексту. */
+        font-size: 16px; /* Задає розмір тексту. */
+        line-height: 1.5; /* Встановлює міжрядковий інтервал. */
+        letter-spacing: 0.04em; /* Додає відступ між літерами. */
+        color: #fff; /* Робить текст білим. */
+        cursor: pointer; /* Додає вигляд курсора "рука" при наведенні. */
+        display: block; /* Для центрування кнопки */
+        margin: 0 auto; /* Центрування через margin */
+        min-width: 169px; /* Мінімальна ширина кнопки */
+        height: 56px; /* Висота кнопки */
+        padding: 10px 20px; /* Відступи всередині кнопки */
+        border: none; /* Без рамки */
+        border-radius: 4px; /* Заокруглені кути */
+        cursor: pointer; /* Курсор у вигляді руки */
+        transition: background-color 0.3s ease; /* Анімація зміни кольору при ховері */
+        margin-top: 48px;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.one-button:hover {
+        background-color: #404BBF; /* Змінює фон кнопки на темно-синій при наведенні. */
+}
+
+.one-button:focus {
+        background-color: #404BBF; /* Змінює фон кнопки на темно-синій при фокусі. */
+}
+
+/* Розділ "Advantages" */
+.two-section {
+        padding: 120px 0; /* Відступи зверху і знизу */
+}
+
+.main-logo {
+        display: inline-block;
+}
+
+.visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+}
+
+.two-section-ul {
+        display: flex;
+        grid-template-columns: repeat(4, 1fr); /* Розміщує елементи в 4 колонки */
+        gap: 24px; /* Відстань між елементами */
+        list-style: none; /* Прибирає маркери списку */
+}
+
+.two-section-li {
+        width: calc((100% - 72px) / 4);
+}
+
+.icon-two-section {
+        display: flex;
+        justify-content: center;
+        border: 1px solid #8e8f99;
+        border-radius: 4px;
+        width: 264px;
+        height: 112px;
+        align-items: center;
+        background-color: #f4f4fd;
+        margin-bottom: 8px;
+}
+
+.two-section-list {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+}
+
+.three-strategy-h {
+        font-weight: 500; /* Встановлює середню жирність тексту. */
+        font-size: 20px; /* Задає розмір шрифту. */
+        line-height: 1.2; /* Встановлює міжрядковий інтервал. */
+        letter-spacing: 0.02em; /* Додає відступ між літерами. */
+        color: #2e2f42; /* Встановлює темно-сірий колір тексту. */
+        font-family: "Roboto", sans-serif; /* Використовує шрифт "Roboto". */
+        margin-bottom: 8px; /* Відступ знизу */
+}
+
+.three-strategy-p {
+        font-weight: 400; /* Встановлює нормальну жирність тексту. */
+        font-size: 16px; /* Задає розмір тексту. */
+        line-height: 1.5; /* Встановлює міжрядковий інтервал. */
+        letter-spacing: 0.02em; /* Додає відступ між літерами. */
+        color: #434455; /* Встановлює основний колір тексту. */
+        font-family: "Roboto", sans-serif; /* Використовує шрифт "Roboto". */
+}
+
+
+/* Розділ "Our Team" */
+
+.three-section {
+        background-color: #F4F4FD; /* Встановлює світло-бузковий фон секції. */
+        padding: 120px 0; /* Відступи зверху і знизу */
+}
+
+.three-section-h {
+        font-family: "Roboto", sans-serif; /* Використовує шрифт "Roboto". */
+        font-weight: 700; /* Задає жирність тексту. */
+        font-size: 36px; /* Задає розмір тексту. */
+        line-height: 1.11; /* Встановлює міжрядковий інтервал. */
+        letter-spacing: 0.02em; /* Додає відступ між літерами. */
+        text-align: center; /* Центрує текст. */
+        color: #2e2f42; /* Встановлює темно-сірий колір тексту. */
+        text-transform: capitalize; /* Перетворює першу літеру кожного слова на велику. */
+        margin-bottom: 72px;
+
+}
+
+.three-section-list {
+        display: flex; /* Горизонтальне вирівнювання елементів списку */
+        gap: 24px; /* Відстань між елементами списку */
+        justify-content: center; /* Центрування списку */
+        list-style: none; /* Прибирає маркери списку */
+        padding: 0; /* Вирівнювання відступів */
+        margin: 0; /* Вирівнювання відступів */
+        flex-wrap: wrap;
+}
+
+.three-section-item {
+        background-color: #fff; /* Задає білий фон для першого елемента списку. */
+        border-radius: 0px 0px 4px 4px;
+        flex-basis: calc((100% - 3 * 24px) / 4); /* Пропорційна ширина кожного елемента */
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+                0px 1px 1px rgba(46, 47, 66, 0.16),
+                0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+
+.team-name {
+        font-weight: 500; /* Встановлює середню жирність тексту. */
+        font-size: 20px; /* Задає розмір шрифту. */
+        line-height: 1.2; /* Встановлює міжрядковий інтервал. */
+        letter-spacing: 0.02em; /* Додає відступ між літерами. */
+        text-align: center; /* Центрує текст. */
+        color: #2e2f42; /* Встановлює темно-сірий колір тексту. */
+        font-family: "Roboto", sans-serif; /* Використовує шрифт "Roboto". */
+        margin-bottom: 8px; /* Відступ знизу */
+}
+
+
+
+.team-role {
+        font-weight: 400; /* Встановлює нормальну жирність тексту. */
+        font-size: 16px; /* Задає розмір тексту. */
+        line-height: 1.5; /* Встановлює міжрядковий інтервал. */
+        letter-spacing: 0.02em; /* Додає відступ між літерами. */
+        text-align: center; /* Центрує текст. */
+        color: #434455; /* Встановлює основний колір тексту. */
+        font-family: "Roboto", sans-serif; /* Використовує шрифт "Roboto". */
+        margin-bottom: 8px;
+}
+
+.div-name-role {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding: 32px 0;
+}
+
+.social {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        list-style: none;
+        padding: 0;
+}
+
+.punkt-spisok {
+        width: 40px;
+        height: 40px;
+}
+
+.ahref {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background-color: var(--primary-color, #4d5ae5);
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social a:hover,
+.social a:focus {
+        background-color: #404bbf;
+}
+
+.social-icon {
+        fill: #f4f4fd;
+}
+
+/* Розділ "Our Portfolio" */
+.four_section {
+        padding: 120px 0;
+}
+
+.ourportfolio {
+        max-width: 1158px; /* Максимальна ширина контейнера */
+        margin: 0 auto; /* Центрує контейнер по горизонталі */
+        padding: 0 15px; /* Відступи по 15px з боків */
+}
+
+.four-section-h {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11111;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #2e2f42;
+        margin-bottom: 72px /* Відступ між заголовком і списком */
+}
+
+.four_section_list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 48px;
+        list-style-type: none; /* Прибирає маркери списку */
+        padding: 0; /* Видаляє відступи по замовчуванню */
+        margin: 0; /* Видаляє відступи по замовчуванню */
+}
+
+.four_section_li {
+        width: calc((100% - 48px) / 3);
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.four_section_li:hover .four_section_licover {
+    
+        opacity: 1;
+        transform: translateY(0%);
+}
+
+.four_section_li:hover {
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.text-up {
+        position: relative;
+        overflow: hidden;
+}
+
+.four_section_licover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #f4f4fd;
+        font-family: "Roboto", sans-serif;
+        background: #4d5ae5;
+        transform: translateY(100%);
+        width: 100%;
+        height: 100%;
+        padding: 40px 32px;
+        /* transition: transform 500ms linear; */
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: auto;
+}
+
+.spusok {
+        padding: 32px 16px;
+        border: 1px solid #e7e9fc;
+        border-top: none;
+}
+
+.four_section_h_one {
+        margin-bottom: 8px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: #2e2f42;
+}
+
+.four_section_p_one {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #434455;
+}
+
+/* Загальні стилі для футера */
+.footer_test {
+        background: #2e2f42;
+        padding: 100px 0;
+        color: #f4f4fd;
+}
+
+.container_footer {
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: baseline;
+        flex-wrap: wrap;
+}
+
+.footer-left {
+        margin-right: 120px;
+}
+
+.main-logo-footer {
+        font-weight: 700;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #4d5ae5;
+        letter-spacing: 0.03em;
+        text-decoration: none;
+        font-family: "Raleway", sans-serif;
+}
+
+.span-studio {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.16667;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #f4f4fd;
+        font-family: "Raleway", sans-serif;
+}
+
+.text_p_footer {
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 264px;
+}
+
+/* Контейнер для соцмереж */
+.social-media {
+        text-align: left;
+
+
+        display: flex;
+        flex-direction: column;
+}
+
+.social-title {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: var(--white-color, #ffffff);
+        margin-bottom: 16px;
+}
+
+.social-icons-two {
+        display: flex;
+        gap: 16px;
+        list-style: none;
+        padding: 0;
+}
+
+.foter-spisok {
+        /* width: 40px;
+        height: 40px; */
+        width: 100%;
+        height: 100%;
+}
+
+.ahref-two {
+        display: flex;
+        /* width: 100%;
+        height: 100%; */
+        width: 40px;
+        height: 40px;
+        background-color: var(--primary-color, #4d5ae5);
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icons-two a:hover,
+.social-icons-two a:focus {
+        background-color: #31d0aa;;
+}
+
+.social-icons-two svg {
+        /* width: 24px;
+        height: 24px; */
+        fill: var(--icon-color, #f4f4fd);
+}
+
+/* Права частина футера (форма підписки) */
+.footer-right {
+        margin-left: 80px;
+}
+
+.text-p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #fff;
+        margin-bottom: 16px;
+}
+
+.email-footer {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+}
+
+.form-input-footer {
+        border: 1px solid #ffffff;
+        border-radius: 4px;
+        width: 264px;
+        height: 40px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+        font-weight: 400;
+        font-size: 12px;
+        background-color: transparent;
+        padding-left: 16px;
+        line-height: 2;
+        letter-spacing: 0.04em;
+        color: #ffffff;
+}
+
+.icon-footer {
+        margin-left: 16px;
+        fill: #fff;
+}
+
+.form-input-footer::placeholder {
+        line-height: 2;
+        letter-spacing: 0.04em;
+        color: #fff;
+}
+
+.btn-footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        padding: 8px 24px;
+        min-width: 165px;
+        height: 40px;
+        background: #4d5ae5;
+        cursor: pointer;
+        border: none;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        color: #fff;
+}
+
+
+/* Модал оверлей */
+.modal-overlay {
+        position: fixed; /* Фіксуємо поверх сторінки */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(46, 47, 66, 0.4);
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000; /* Виставляємо високий рівень */
+
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+}
+
+.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+}
+
+/* Модальне вікно */
+.modal {
+        position: absolute;
+        width: 408px;
+        min-height: 584px;
+        background: #fcfcfc;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 72px 24px 24px 24px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+}
+
+/* Закрити модальне вікно */
+.modal-close {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        border-radius: 50%;
+        background-color: #e7e9fc;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        /*border: none;
+         stroke-width: 1px;
+        stroke: rgba(0, 0, 0, 0.1);
+        margin-bottom: 24px;  */       
+}
+
+/* .modal-close:hover svg,
+.modal-close:focus svg {
+        fill: #ffffff;
+
+} */
+
+.modal-close:hover {
+        background-color: #404bbf;
+        border: none;
+        fill: #ffffff;
+}
+
+
+.modal-close:focus {
+        background-color: #404bbf;
+        border: none;
+        fill: #ffffff;
+}
+
+/* .modal-close svg {
+        fill: #2e2f42;
+}
+
+.modal-close svg:hover {
+        fill: #ffffff;
+}
+
+.modal-close svg:focus {
+        fill: #ffffff;
+} */
+
+.button-svg {
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+/* Заголовок */
+.modal-title {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #2E2F42;
+        margin-bottom: 16px;
+        /* margin-top: 72px; */
+}
+
+.div-bezparagrafa {
+        margin-bottom: 8px;
+
+}
+
+/* Лейбли */
+.modal-label {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        color: #8e8f99;
+        display: block;
+        margin-bottom: 4px;
+}
+
+.div-input-icon {
+        position: relative;
+
+}
+
+/* Поля введення */
+.input-wrapper {
+        margin-bottom: 8px;
+
+
+}
+
+
+.modal-input {
+        width: 100%;
+        height: 40px;
+        padding-left: 38px;
+        border: 1px solid rgba(46, 47, 66, 0.4);
+        border-radius: 4px;
+        background-color: transparent;
+        padding-left: 38px;
+        outline: transparent;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.modal-input:focus {
+        border-color: #4D5AE5;
+}
+
+.modal-input:focus + .input-icon {
+        fill: #4d5ae5;
+}
+
+.input-icon {
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-icon:focus {
+        fill: #4D5AE5;
+
+}
+
+.modal-input::placeholder {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.16667;
+        letter-spacing: 0.04em;
+        color: rgba(46, 47, 66, 0.4);
+}
+
+/* .modal-input:valid {
+        border-color: rgb(63, 140, 63);
+}
+
+.modal-input:invalid {
+        border-color: rgb(213, 21, 21);
+} */
+
+/* Текстове поле */
+.div-comment {
+        margin-bottom: 16px;
+}
+
+.modal-textarea {
+        width: 100%;
+        height: 120px;
+        border: 1px solid rgba(46, 47, 66, 0.4);
+        padding: 8px 16px;
+        outline: none;
+        resize: none;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+
+        color: rgba(46, 47, 66, 0.4);
+        border: 1px solid rgba(46, 47, 66, 0.4);
+        border-radius: 4px;
+        background-color: transparent;
+        outline: transparent;
+        resize: none;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-textarea:focus {
+        border-color: #4D5AE5;
+}
+
+.modal-textarea::placeholder {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.16667;
+        letter-spacing: 0.04em;
+        color: rgba(46, 47, 66, 0.4);
+}
+
+/* Чекбокс */
+.checkbox-wrapper {
+        /* display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 24px; */
+
+        margin-bottom: 24px;
+}
+
+.visually-hidden {
+        width: 16px;
+        height: 16px;
+        border: 1px solid rgba(46, 47, 66, 0.4);
+        border-radius: 2px;
+        cursor: pointer;
+}
+
+.modal-checkbox-label {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        color: #8e8f99;
+        /* display: flex; */
+        align-items: center;
+
+}
+/* 
+.modal-checkbox-label > span {
+        display: inline-flex;
+} */
+
+.label-span {
+        width: 16px;
+        height: 16px;
+        border-radius: 2px;
+        border: 1px solid rgba(46, 47, 66, 0.4);
+        margin-right: 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        fill: transparent;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-check-item {
+
+
+
+
+
+        display: inline-flex;
+
+
+}
+
+ .input-check:checked + .modal-checkbox-label .label-span {
+         background-color: #404bbf;
+         border: none;
+         fill: #f4f4fd;
+ }
+
+
+.modal-checkbox-label {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        color: #8e8f99;
+        align-items: center;
+}
+
+.modal-check-text a {
+        text-decoration: underline;
+}
+
+.privacy-policy {
+        line-height: 1.33333;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: #4d5ae5;
+}
+
+/* Кнопка */
+.modal-button {
+        display: block;
+        margin: 0 auto;
+        min-width: 169px;
+        height: 56px;
+        background: #4d5ae5;
+        border: none;
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 16px 32px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.modal-button:hover {
+        background: #404bbf;
+}
+
+.modal-button:focus {
+        background: #404bbf;
+}
