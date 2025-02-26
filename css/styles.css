@@ -77,6 +77,7 @@ body {
         flex-wrap: wrap;
         /* max-width: 1440px; */
         max-width: 1158px;
+        /* max-width: 320px; */
         margin: 0 auto;
         padding: 0 15px;
 }
@@ -142,6 +143,36 @@ img {
         position: relative;
         transition-property: color;
 }
+
+@media screen and (min-width: 321px) {
+     .mobile-menu,
+     .burger-menu {
+        display: none;
+     }
+}
+
+@media screen and (max-width: 320px) {
+        .menu-list,
+        .contacts {
+                display: none;
+        }
+
+        .burger-menu {
+                margin-left: auto;
+        }
+
+        .main-logo {
+                margin-right: 149px;
+                padding: 16px 0 16px 0;
+        }
+
+        .container {
+                margin: 0;
+                padding: 0 16px;
+        }
+}
+
+
 
 
 .menu-link-after::after {
@@ -242,6 +273,12 @@ img {
         padding-top: 188px;
         padding-bottom: 188px;
 }
+@media screen and (max-width: 320px) {
+.one-section {
+        padding-top: 72px;
+        padding-bottom: 72px;
+}
+}
 
 .one-h {
         font-weight: 700;
@@ -254,6 +291,14 @@ img {
         margin-bottom: 0px;
         max-width: 496px;
         margin: 0 auto;
+}
+
+@media screen and (max-width: 320px) {
+.one-h {
+        font-size: 36px;
+        line-height: 1.11111;
+        max-width: 160px;
+}
 }
 
 .one-button {
@@ -278,6 +323,13 @@ img {
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (max-width: 320px) {
+.one-button {
+        margin-top: 72px;
+        padding: 16px 32px;
+        }
+}
+
 .one-button:hover {
         background-color: #404BBF;
 }
@@ -288,7 +340,9 @@ img {
 
 /* Розділ "Advantages" */
 .two-section {
-        padding: 120px 0;
+        /* padding: 120px 0; */
+        padding: 0;
+
 }
 
 .main-logo {
@@ -311,12 +365,29 @@ img {
 .two-section-ul {
         display: flex;
         grid-template-columns: repeat(4, 1fr);
+        align-items: center;
         gap: 24px;
         list-style: none;
 }
 
+@media screen and (max-width: 320px) {
+        .two-section-ul {
+                flex-direction: column;
+                max-width: 288px;
+                padding-top: 96px;
+                padding-bottom: 96px;
+                gap: 72px;
+        }
+}
+
 .two-section-li {
         width: calc((100% - 72px) / 4);
+}
+
+@media screen and (max-width: 320px) {
+        .two-section-li {
+        width: 100%;
+        }
 }
 
 .icon-two-section {
@@ -331,12 +402,18 @@ img {
         margin-bottom: 8px;
 }
 
-.two-section-list {
+@media screen and (max-width: 320px) {
+        .icon-two-section {
+                display: none;
+        }
+}
+
+/* .two-section-list {
         align-items: center;
         display: flex;
         justify-content: space-between;
         list-style: none;
-}
+} */
 
 .three-strategy-h {
         font-weight: 500;
@@ -348,6 +425,15 @@ img {
         margin-bottom: 8px;
 }
 
+@media screen and (max-width: 320px) {
+        .three-strategy-h {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11111;
+        text-align: center;
+        }
+}
+
 .three-strategy-p {
         font-weight: 400;
         font-size: 16px; 
@@ -357,12 +443,26 @@ img {
         font-family: "Roboto", sans-serif;
 }
 
+@media screen and (max-width: 320px) {
+        .three-strategy-p {
+        font-weight: 500;
+
+        }
+}
+
 
 /* Розділ "Our Team" */
 
 .three-section {
         background-color: #F4F4FD;
         padding: 120px 0;
+}
+
+@media screen and (max-width: 320px) {
+        .three-section {
+        padding: 0;
+
+        }
 }
 
 .three-section-h {
@@ -495,6 +595,12 @@ img {
         padding: 0;
         margin: 0;
 }
+@media screen and (max-width: 320px) {
+        .four_section_list {
+        flex-direction: column;
+        }
+}
+
 
 .four_section_li {
         width: calc((100% - 48px) / 3);
@@ -1023,138 +1129,7 @@ img {
         background: #404bbf;
 }
 
-/* ===========================
-   📌 Планшети (768px) 
-   =========================== */
-@media screen and (max-width: 768px) {
-
-        /* Контейнер */
-        .container {
-                max-width: 768px;
-                padding: 0 20px;
-        }
-
-        /* Хедер */
-        .header-container {
-                padding: 10px 20px;
-        }
-
-        /* Приховуємо бургер-меню (воно буде лише для мобільних) */
-        .burger-menu {
-                display: none;
-        }
-
-        /* Головне меню відображається як список */
-        .menu-list {
-                display: flex;
-                gap: 20px;
-        }
-
-        .menu-link {
-                font-size: 14px;
-        }
-
-        /* Контакти */
-        .contacts-list {
-                gap: 20px;
-        }
-
-        .contacts-link {
-                font-size: 12px;
-        }
+.mobile-menu {
+        display: none;
 }
 
-/* ===========================
-   📌 Мобільні (до 320px)
-   =========================== */
-@media screen and (max-width: 320px) {
-
-        /* Контейнер */
-        .container {
-                max-width: 320px;
-                padding: 0 15px;
-        }
-
-        /* Хедер */
-        .header-container {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 10px 15px;
-        }
-
-        /* Логотип */
-        .main-logo {
-                font-size: 16px;
-        }
-
-        /* Ховаємо основне меню на мобільних */
-        .menu-list {
-                display: none;
-        }
-
-        /* Показуємо бургер-меню */
-        .burger-menu {
-                display: block;
-                cursor: pointer;
-        }
-
-        .burger-menu-icon {
-                fill: #2e2f42;
-                transition: fill 0.3s ease;
-        }
-
-        .burger-menu:hover .burger-menu-icon {
-                fill: #4d5ae5;
-        }
-
-        /* Мобільне меню (бургер-меню) */
-        .mobile-menu {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(46, 47, 66, 0.95);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                opacity: 0;
-                visibility: hidden;
-                transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-
-        /* Відкриваємо меню */
-        .mobile-menu.open {
-                opacity: 1;
-                visibility: visible;
-        }
-
-        /* Стилі для списку меню */
-        .mobile-menu .menu-list {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-                text-align: center;
-        }
-
-        .mobile-menu .menu-link {
-                font-size: 18px;
-                color: #fff;
-        }
-
-        .mobile-menu .menu-link:hover {
-                color: #4d5ae5;
-        }
-
-        /* Кнопка закриття меню */
-        .close-menu {
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                font-size: 30px;
-                color: #fff;
-                cursor: pointer;
-        }
-}
