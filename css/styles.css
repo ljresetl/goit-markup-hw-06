@@ -347,6 +347,7 @@ img {
         font-size: 16px;
         color: #333;
         transition: color 0.3s ease;
+        /* margin-right: 122px; */
 }
 
 .menu-list li:first-child .menu-link {
@@ -426,6 +427,7 @@ img {
                 display: flex;
                 gap: 40px;
                 align-items: center;
+                margin-right: 122px;
         }
 
         .menu-link.current {
