@@ -75,13 +75,14 @@ body {
         pointer-events: none;
         transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
                 visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+        z-index: 9999;
 }
 
 .mobile-menu.is-open {
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
+        display: block;
 }
 
 .mobile-menu-container {
@@ -132,7 +133,7 @@ body {
         margin-bottom: auto;
 }
 
-.mobile-menu-navigation-li {
+.mobile-menu-navigation {
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -144,6 +145,10 @@ body {
 
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* .mobile-menu-navigation-li {
+        padding: 20px 0;
+} */
 
 .mobile-menu-navigation-li:hover,
 .mobile-menu-navigation-li:focus {
