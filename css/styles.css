@@ -1003,7 +1003,7 @@ img {
         overflow: hidden;
 }
 
-/* .four_section_licover {
+.four_section_licover {
         position: absolute;
         top: 0;
         left: 0;
@@ -1020,7 +1020,7 @@ img {
         padding: 40px 32px;
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
         overflow: auto;
-} */
+}
 
 .four_section_licover {
          display: none;
@@ -1327,8 +1327,8 @@ img {
 
 @media screen and (min-width: 768px) {
         .footer_test .container {
-                max-width: 736px;
-                margin-left: 92px;
+                max-width: 600px;
+                /* margin-left: 92px; */
         }
 
         .container_footer {
